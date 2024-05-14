@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  django: &django
+    build:
+      context: .
+    ports:
+      - "8200:8200"
+
+    command: ["sh", "./compose/start.sh"]
+
+
+
