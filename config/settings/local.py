@@ -14,7 +14,12 @@ SECRET_KEY = env(
     default="Fe12vtTNf8w9aTDJ347U6Ha8wgbPzhG9cdWcc0hnITdd2WXfFZ5ELFvqrV7ob5Yf",
 )
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1"]  # noqa: S104
+ALLOWED_HOSTS = [
+    "localhost",
+    "0.0.0.0",
+    "127.0.0.1",
+    "cashfusion-29c0e8031f91.herokuapp.com",
+]  # noqa: S104
 
 # CACHES
 # ------------------------------------------------------------------------------
@@ -61,7 +66,7 @@ if env("USE_DOCKER") == "yes":
     # ------------------------------------------------------------------------------
     # This is a custom setting for RunServerPlus to fix reloader issue in Windows docker environment
     # Werkzeug reloader type [auto, watchdog, or stat]
-    RUNSERVERPLUS_POLLER_RELOADER_TYPE = 'stat'
+    RUNSERVERPLUS_POLLER_RELOADER_TYPE = "stat"
     # If you have CPU and IO load issues, you can increase this poller interval e.g) 5
     RUNSERVERPLUS_POLLER_RELOADER_INTERVAL = 1
 

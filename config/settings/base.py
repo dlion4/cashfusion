@@ -6,6 +6,7 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 import environ
+
 load_dotenv()
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
@@ -68,7 +69,7 @@ DJANGO_APPS = [
     "django.contrib.sites",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "django.contrib.humanize", # Handy template tags
+    "django.contrib.humanize",  # Handy template tags
     "django.contrib.admin",
     "django.forms",
 ]
@@ -352,3 +353,10 @@ SPECTACULAR_SETTINGS = {
 }
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://cashfusion-29c0e8031f91.herokuapp.com",
+]
+
+CORS_ALLOW_ALL_ORIGINS = True
