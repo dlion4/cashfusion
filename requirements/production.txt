@@ -10,3 +10,6 @@ sentry-sdk  # https://github.com/getsentry/sentry-python
 # ------------------------------------------------------------------------------
 django-storages[s3]  # https://github.com/jschneier/django-storages
 django-anymail[amazon-ses]  # https://github.com/anymail/django-anymail
+django-debug-toolbar
+django-extensions
+python-dotenv
